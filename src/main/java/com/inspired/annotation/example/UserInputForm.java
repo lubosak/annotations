@@ -1,11 +1,16 @@
 package com.inspired.annotation.example;
 
 import java.time.LocalDate;
+import javax.validation.constraints.*;
 
+@DateOrder(dateFieldsAscending = {"effectiveDate", "expirationDate"},
+			message = "Expiration date must be after the effective date")
 public class UserInputForm {
 
+	@Past(message = "Birth date must be in the past")
 	private LocalDate birthDate;
 	
+	@Future(message = "The earliest effective date can be tomorrow")
 	private LocalDate effectiveDate;
 	
 	private LocalDate expirationDate;
