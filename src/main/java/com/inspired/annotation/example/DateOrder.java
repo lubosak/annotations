@@ -16,7 +16,7 @@ import javax.validation.Payload;
 public @interface DateOrder {
 
 	String[] dateFieldsAscending();
-	String message();
+	String message() default "Dates are not in proper order";
 	
 	//required for @Constraint by JSR-303
 	Class<?>[] groups() default {};
