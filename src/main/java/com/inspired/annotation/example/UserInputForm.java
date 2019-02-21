@@ -7,10 +7,14 @@ import javax.validation.constraints.*;
 			message = "Expiration date must be after the effective date")
 public class UserInputForm {
 
+	@Past(message = "Just to make a point")
 	@Past(message = "Birth date must be in the past")
 	private LocalDate birthDate;
 	
-	@Future(message = "The earliest effective date can be tomorrow")
+	@Future.List({
+			@Future(message = "The earliest effective date can be tomorrow"),
+			@Future(message = "Same as above")
+	})
 	private LocalDate effectiveDate;
 	
 	private LocalDate expirationDate;

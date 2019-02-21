@@ -1,4 +1,4 @@
-package com.inspired.annotation.finder;
+package com.inspired.annotation.finder.spring;
 
 import java.lang.annotation.Annotation;
 import java.util.ArrayList;
@@ -7,6 +7,9 @@ import java.util.List;
 import java.util.Set;
 
 import org.springframework.core.annotation.AnnotationUtils;
+
+import com.inspired.annotation.finder.AbstractAnnotationFinder;
+import com.inspired.annotation.finder.ITypeAnnotationFinder;
 
 public class TypeAnnotationFinder<A extends Annotation> extends AbstractAnnotationFinder<A> implements ITypeAnnotationFinder<A> {
 

@@ -1,4 +1,4 @@
-package com.inspired.annotation.finder;
+package com.inspired.annotation.finder.spring;
 
 import java.io.Serializable;
 import java.lang.annotation.Annotation;
@@ -14,6 +14,9 @@ import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.util.ReflectionUtils;
 import org.springframework.util.ReflectionUtils.FieldCallback;
 import org.springframework.util.ReflectionUtils.FieldFilter;
+
+import com.inspired.annotation.finder.AbstractAnnotationFinder;
+import com.inspired.annotation.finder.IFieldAnnotationFinder;
 
 import lombok.NonNull;
 
